@@ -168,7 +168,7 @@ fun AppScreen(
             }
         }
 
-    var showPaywall by remember { mutableStateOf(false) }
+     
 
     Scaffold(
         bottomBar = {
@@ -342,7 +342,7 @@ fun AppScreen(
 
                     entry<Screen.Settings.Main> {
                         SettingsScreenRoot(
-                            setShowPaywall = { showPaywall = it },
+                              
                             contentPadding = contentPadding
                         )
                     }
@@ -363,6 +363,6 @@ fun AppScreen(
         enter = slideInVertically { it },
         exit = slideOutVertically { it }
     ) {
-        flavorUI.tomatoPlusPaywallDialog(isPlus) { showPaywall = false }
+         
     }
 }
