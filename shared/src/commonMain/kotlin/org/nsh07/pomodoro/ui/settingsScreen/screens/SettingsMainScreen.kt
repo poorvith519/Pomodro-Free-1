@@ -157,9 +157,7 @@ fun SettingsMainScreen(
         ) {
             item { Spacer(Modifier.height(14.dp)) }
 
-            item {
-                PlusPromo(isPlus, setShowPaywall)
-            }
+            
 
             item { Spacer(Modifier.height(12.dp)) }
 
