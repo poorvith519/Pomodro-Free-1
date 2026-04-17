@@ -98,7 +98,7 @@ fun SettingsMainScreen(
     isPlus: Boolean,
     onAction: (SettingsAction) -> Unit,
     onNavigate: (Screen.Settings) -> Unit,
-    setShowPaywall: (Boolean) -> Unit,
+     
     modifier: Modifier = Modifier,
     appInfo: AppInfo = koinInject()
 ) {
