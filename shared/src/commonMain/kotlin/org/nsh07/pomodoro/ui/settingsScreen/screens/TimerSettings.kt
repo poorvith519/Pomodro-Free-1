@@ -454,7 +454,7 @@ fun TimerSettings(
                     )
                 }
 
-                if (isPlus) {
+                if  {
                     item { Spacer(Modifier.height(12.dp)) }
                     itemsIndexed(switchItems[1]) { index, item ->
                         ListItem(
