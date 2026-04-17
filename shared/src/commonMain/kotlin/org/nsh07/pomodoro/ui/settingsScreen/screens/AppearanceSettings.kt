@@ -154,7 +154,7 @@ fun AppearanceSettings(
                     ThemePickerListItem(
                         theme = settingsState.theme,
                         onThemeChange = { onAction(SettingsAction.SaveTheme(it)) },
-                        items = if (isPlus) 3 else 1,
+                        items = 3,
                         index = 0
                     )
                 }
@@ -167,8 +167,8 @@ fun AppearanceSettings(
                     ColorSchemePickerListItem(
                         color = settingsState.colorScheme.toColor(),
                         items = 3,
-                        index = if (isPlus) 1 else 0,
-                        isPlus = isPlus,
+                        index = 1,
+                         
                         onColorChange = { onAction(SettingsAction.SaveColorScheme(it)) },
                     )
                 }
@@ -191,7 +191,7 @@ fun AppearanceSettings(
                             Switch(
                                 checked = item.checked,
                                 onCheckedChange = { item.onClick(it) },
-                                enabled = isPlus,
+                                enabled = true,
                                 thumbContent = {
                                     if (item.checked) {
                                         Icon(
@@ -211,7 +211,7 @@ fun AppearanceSettings(
                             )
                         },
                         colors = listItemColors,
-                        enabled = isPlus,
+                        enabled = true,
                         shapes = segmentedListItemShapes(2, 3)
                     )
                 }
