@@ -192,15 +192,15 @@ fun TimerSettings(
             listOf(
                 SettingsSwitchItem(
                     checked = settingsState.aodEnabled,
-                    enabled = isPlus,
+                    enabled = true,
                     icon = Res.drawable.aod,
                     label = Res.string.always_on_display,
                     description = Res.string.always_on_display_desc,
                     onClick = { onAction(SettingsAction.SaveAodEnabled(it)) }
                 ),
                 SettingsSwitchItem(
-                    checked = settingsState.secureAod && isPlus,
-                    enabled = isPlus && settingsState.aodEnabled,
+                    checked = settingsState.secureAod,
+                    enabled = true && settingsState.aodEnabled,
                     icon = Res.drawable.mobile_lock_portrait,
                     label = Res.string.secure_aod,
                     description = Res.string.secure_aod_desc,
