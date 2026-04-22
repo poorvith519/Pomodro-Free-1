@@ -117,6 +117,21 @@ class SettingsViewModel(
             is SettingsAction.SaveVibrationOffDuration -> saveVibrationOffDuration(action.duration)
             is SettingsAction.SaveVibrationAmplitude -> saveVibrationAmplitude(action.amplitude)
 
+            is SettingsAction.SaveClockStyle ->
+                savePreference(Preference.CLOCK_STYLE, action.style)
+
+            is SettingsAction.SaveWidgetStyle ->
+                savePreference(Preference.WIDGET_STYLE, action.style)
+
+            is SettingsAction.SaveClockFontWeight ->
+                savePreference(Preference.CLOCK_FONT_WEIGHT, action.weight)
+
+            is SettingsAction.SaveCardRadius ->
+                savePreference(Preference.CARD_RADIUS, action.radius)
+
+            is SettingsAction.SaveCompactMode ->
+                savePreference(Preference.COMPACT_MODE, action.enabled)
+
             is SettingsAction.AskEraseData -> askEraseData()
             is SettingsAction.CancelEraseData -> cancelEraseData()
             is SettingsAction.EraseData -> deleteStats()
