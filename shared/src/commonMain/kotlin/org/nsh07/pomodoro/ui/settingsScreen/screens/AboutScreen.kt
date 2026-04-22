@@ -256,7 +256,7 @@ fun AboutScreen(
                                 Spacer(Modifier.width(16.dp))
                                 Column {
                                     Text(
-                                        "Nishant Mishra",
+                                        "Poorvith M P.",
                                         style = typography.titleLarge,
                                         color = colorScheme.onSurface,
                                         fontFamily = typography.bodyLarge.fontFamily
