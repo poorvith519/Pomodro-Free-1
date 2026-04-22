@@ -47,5 +47,20 @@ data class SettingsState(
 
     val sessionLength: Int = 4,
 
-    val alarmSoundUri: String? = getDefaultAlarmTone()
+    val alarmSoundUri: String? = getDefaultAlarmTone(),
+
+    // Clock customisation (digital, minimal, analog)
+    val clockStyle: String = "digital",
+
+    // Widget style (standard, compact, bold)
+    val widgetStyle: String = "standard",
+
+    // Accent font weight (normal, light, heavy)
+    val clockFontWeight: String = "normal",
+
+    // Card corner radius (small, medium, large)
+    val cardRadius: String = "medium",
+
+    // Compact mode for timer screen
+    val compactMode: Boolean = false
 )
