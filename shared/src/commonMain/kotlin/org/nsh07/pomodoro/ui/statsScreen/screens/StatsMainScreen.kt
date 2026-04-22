@@ -71,6 +71,10 @@ import org.nsh07.pomodoro.di.AppInfo
 import org.nsh07.pomodoro.ui.Screen
 import org.nsh07.pomodoro.ui.mergePaddingValues
 import org.nsh07.pomodoro.ui.statsScreen.components.TimeColumnChart
+import org.nsh07.pomodoro.ui.statsScreen.components.StreakCard
+import org.nsh07.pomodoro.ui.statsScreen.components.FocusEfficiencyChart
+import org.nsh07.pomodoro.ui.statsScreen.components.HourlyHeatmapChart
+import org.nsh07.pomodoro.ui.statsScreen.components.CumulativeFocusChart
 import org.nsh07.pomodoro.ui.statsScreen.components.TimeLineChart
 import org.nsh07.pomodoro.ui.statsScreen.components.sharedBoundsReveal
 import org.nsh07.pomodoro.ui.theme.CustomColors.listItemColors
@@ -117,6 +121,7 @@ fun SharedTransitionScope.StatsMainScreen(
     minutesFormat: String,
     zoomStates: List<VicoZoomState>,
     scrollStates: List<VicoScrollState>,
+    yearStats: List<org.nsh07.pomodoro.data.Stat?> = emptyList(),
     onNavigate: (Screen.Stats) -> Unit,
     modifier: Modifier = Modifier,
     appInfo: AppInfo = koinInject(),
@@ -570,6 +575,34 @@ fun SharedTransitionScope.StatsMainScreen(
             item {
                 Spacer(Modifier.height(12.dp))
             }
+
+            // ── Streak Card ──────────────────────────────────────────────────
+            item {
+                StreakCard(stats = yearStats, modifier = Modifier.padding(vertical = 4.dp))
+            }
+
+            item { Spacer(Modifier.height(8.dp)) }
+
+            // ── Focus Efficiency (focus vs break ratio per day) ───────────────
+            item {
+                FocusEfficiencyChart(stats = yearStats)
+            }
+
+            item { Spacer(Modifier.height(8.dp)) }
+
+            // ── Peak Focus Hours heatmap ──────────────────────────────────────
+            item {
+                HourlyHeatmapChart(stats = yearStats)
+            }
+
+            item { Spacer(Modifier.height(8.dp)) }
+
+            // ── Cumulative Focus trend ────────────────────────────────────────
+            item {
+                CumulativeFocusChart(stats = yearStats)
+            }
+
+            item { Spacer(Modifier.height(12.dp)) }
 
             item {
                 Column(
