@@ -1,155 +1,46 @@
-<div align="center">
-  <img src="fastlane/metadata/android/en-US/images/featureGraphic.png">
+# Cypher Focus
 
-## About
+A minimalist, distraction-free Pomodoro timer for Android — built for deep work.
 
-Tomato is a minimalist Pomodoro timer for Android based on Material 3 Expressive.
+## Features
 
-</div>
+- Clean, minimal UI with no clutter
+- Fully customizable focus, short break, and long break durations
+- Always On Display (AOD) mode — keep the timer visible without unlocking your device
+- Session tracking with detailed focus history and heatmaps
+- Do Not Disturb integration during focus sessions
+- Alarm and vibration alerts on timer completion
+- Auto-start next timer option
+- Dynamic color theming (Android 12+)
+- Black theme for OLED displays
+- Home screen widgets (timer, today stats, history chart)
+- Full backup and restore support
+- Infinite focus mode
+- No ads, no tracking, completely free
 
-<div align="center">
+## Tech Stack
 
-<a href="https://hosted.weblate.org/engage/tomato/?utm_source=widget">
-  <img src="https://img.shields.io/weblate/progress/tomato?logo=weblate&labelColor=1a1a1a&color=2ecba9">
-</a>
-<a href="https://github.com/nsh07/tomato/releases/latest">
-  <img src="https://img.shields.io/github/v/release/nsh07/tomato?logo=github&labelColor=1a1a1a">
-</a>
-<a href="https://f-droid.org/packages/org.nsh07.pomodoro">
-  <img src="https://img.shields.io/f-droid/v/org.nsh07.pomodoro?logo=f-droid&labelColor=1a1a1a">
-</a>
-<a href="https://github.com/nsh07/tomato/blob/main/LICENSE">
-  <img src="https://img.shields.io/github/license/nsh07/tomato?logo=gnu&color=blue&labelColor=1a1a1a">
-</a>
-<a href="https://discord.gg/MHhBQcxHu6">
-  <img src=https://img.shields.io/discord/1455603400254292196?logo=discord&label=Discord&labelColor=1a1a1a&color=5865F2>
-</a>
+- Kotlin Multiplatform (KMP)
+- Jetpack Compose / Compose Multiplatform
+- Material 3 (Material You)
+- Koin for dependency injection
+- Room database (via KMP)
 
-<p>
-  <a href="https://play.google.com/store/apps/details?id=org.nsh07.pomodoro">
-    <img src=".github/repo_photos/googleplay.png" width="200">
-  </a>
-  <a href="https://f-droid.org/packages/org.nsh07.pomodoro">
-      <img src="https://f-droid.org/badge/get-it-on.png" width="200">
-  </a>
-  <a href="https://apt.izzysoft.de/fdroid/index/apk/org.nsh07.pomodoro">
-    <img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" width="200">
-  </a>
-</p>
-<p>
-  <a href="https://hosted.weblate.org/engage/tomato/">
-    <img src="https://hosted.weblate.org/widget/tomato/287x66-black.png" alt="Translation status" />
-  </a>
-</p>
+## Getting Started
 
-<br/>
+Clone the repository and open it in Android Studio:
 
-> *"It just might be the best looking timer app that I've ever seen"*
+```bash
+git clone https://github.com/poorvith519/Pomodro-Free-1.git
+```
 
-\- [*HowToMen* on YouTube](https://www.youtube.com/watch?v=iwvHk4SUrMQ&t=280s)
+Build the `foss` flavor for a fully unlocked, open-source build.
 
-<br/>
+## Developer
 
-> *"... an app to support this habit helps me stay focused and get things done. Currently, that app
-is Tomato."*
+Built by **Poorvith M P.**
 
-\- [*Android
-Authority*](https://www.androidauthority.com/best-new-android-apps-october-2025-3602966/)
+## License
 
-<br/>
-
-</div>
-
-## Screenshots
-
-<p align="center" width="100%">
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="25%"><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="25%"><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="25%"><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" width="25%"><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" width="25%"><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/6.png" width="25%"><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/7.png" width="25%"><img src="fastlane/metadata/android/en-US/images/phoneScreenshots/8.png" width="25%">
-</p>
-
-### Features
-
-- Minimalist UI based on the latest Material 3 Expressive guidelines
-- Detailed statistics of work/study times in an easy to understand manner
-    - Stats for the current day visible at a glance
-    - Stats for the last week and last month shown in an easy to read, clean graph
-    - Additional stats for last week and month showing at what time of the day you're the most
-      productive
-- Customizable timer parameters
-- Support for Now Bar/Live Updates on Android 16 and later
-
-## Translation
-
-This project is [available on Hosted Weblate](https://hosted.weblate.org/engage/tomato/) for
-translation.
-
-You can contribute to this project even if you are not a developer by helping in
-translating this project into languages you know.
-
-<a href="https://hosted.weblate.org/engage/tomato/">
-<img src="https://hosted.weblate.org/widget/tomato/horizontal-auto.svg" alt="Translation status" />
-</a>
-
-## Download
-
-- **Google Play Store** (recommended): Tomato is available on the Google Play Store.
-  [You can download it through this link](https://play.google.com/store/apps/details?id=org.nsh07.pomodoro).
-- **F-Droid** (recommended): Tomato is available on the official F-Droid repository. Simply open
-  your preferred F-Droid app and search for Tomato. Updates on F-Droid are generally a week late. To
-  get faster updates, you can install it through
-  the [IzzyOnDroid repository](https://apt.izzysoft.de/fdroid/).
-- **GitHub releases**: Alternatively, you can manually download and install APKs from
-  the [Releases](https://github.com/nsh07/Tomato/releases/latest) section of this repo (This method
-  is not recommended, use Google Play/F-Droid instead).
-
-> [!TIP]
-> To [verify](https://developer.android.com/studio/command-line/apksigner#usage-verify) the APK
-> downloaded from GitHub, use the following signing certificate fingerprints:
-> ```
->   SHA1: B1:4E:17:93:11:E8:DB:D5:35:EF:8D:E9:FB:8F:FF:08:F8:EC:65:08
-> SHA256: 07:BE:F3:05:81:BA:EE:8F:45:EC:93:E4:7E:E6:8E:F2:08:74:E5:0E:F5:70:9C:78:B2:EE:67:AC:86:BE:4C:3D
-> ```
-> The SHA256 and MD5 hashes of the individual APK files are also available in the `checksum.txt`
-> file for each release.
-
-## Donate
-
-You can support Tomato's development
-through [my GitHub Sponsors page](https://github.com/sponsors/nsh07)
-or [my BuyMeACoffee page](https://coff.ee/nsh07):
-
-<a href="https://github.com/sponsors/nsh07">
-  <img src=".github/repo_photos/sponsors.png" width="128px">
-</a>
-<a href="https://coff.ee/nsh07">
-  <img src=".github/repo_photos/bmc_qr.png" width="128px">
-</a>
-
-### Members and Sponsors
-
-- Shun Min Chang ([@jack24254029](https://github.com/jack24254029) on GitHub)
-- Chinedu Oji (on BuyMeACoffee)
-- Zach Alden (on BuyMeACoffee)
-
-## Special Thanks
-
-This app was made possible by the following libraries:
-
-- [Jetpack Navigation 3](https://developer.android.com/jetpack/androidx/releases/navigation3) -
-  Navigation
-- [Room](https://developer.android.com/jetpack/androidx/releases/room) - SQLite Database
-- [Vico](https://github.com/patrykandpatrick/vico) - Graphs and charts
-- [MaterialKolor](https://github.com/jordond/materialkolor)- Material 3 color schemes
-
-### Fonts:
-
-- [Roboto Flex](https://fonts.google.com/specimen/Roboto+Flex) by
-  Google<br/><img src=".github/repo_photos/roboto-flex-banner.jpg" width="400">
-
-- [Google Sans Flex](https://fonts.google.com/specimen/Google+Sans+Flex) by
-  Google<br/><img src=".github/repo_photos/google-sans-flex.jpg" width="400">
-
-## Star History
-
-Please give this repo a star if you liked my work
-
-[![Star History Chart](https://app.repohistory.com/api/svg?repo=nsh07/Tomato&type=Date&background=F9FAEF&color=4C662B)](https://app.repohistory.com/star-history)
+This project is licensed under the GNU General Public License v3.0.  
+See the [LICENSE](LICENSE) file for details.
