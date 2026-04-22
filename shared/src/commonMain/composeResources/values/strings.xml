@@ -22,8 +22,8 @@
     <string name="alarm_sound">Alarm sound</string>
     <string name="always_on_display">Always On Display</string>
     <string name="always_on_display_desc">Tap anywhere when viewing the timer to switch to AOD mode</string>
-    <string name="app_name">Tomato</string>
-    <string name="app_name_plus">Tomato+</string>
+    <string name="app_name">Cypher Focus</string>
+    <string name="app_name_plus">Cypher Focus+</string>
     <string name="appearance">Appearance</string>
     <string name="auto_start_next_timer">Auto start next timer</string>
     <string name="auto_start_next_timer_desc">Start next timer after stopping an alarm</string>
@@ -61,9 +61,9 @@
     <string name="focus_history_heatmap_desc">Focus history of the past year. Deeper colors represent a longer duration. Days are grouped by month. Tap on a day for more info.</string>
     <string name="focus_per_day_avg">focus per day (avg)</string>
     <string name="gap">Gap</string>
-    <string name="get_plus">Get Tomato+</string>
-    <string name="help_with_translation">Help translate Tomato</string>
-    <string name="help_with_translation_desc">Translate Tomato into your language</string>
+    <string name="get_plus">Get Cypher Focus+</string>
+    <string name="help_with_translation">Help translate Cypher Focus</string>
+    <string name="help_with_translation_desc">Translate Cypher Focus into your language</string>
     <string name="history_widget_desc">See a chart of the focus durations of the past few days. The number of days displayed depends on the size of the widget.</string>
     <string name="hours_and_minutes_format">%1$dh %2$dm</string>
     <string name="hours_format">%1$dh</string>
@@ -123,9 +123,9 @@
     <string name="timer_settings_reset_info">Reset the timer to change settings</string>
     <string name="today">Today</string>
     <string name="today_widget_desc">Today\u0027s focus stats</string>
-    <string name="tomato_foss">Tomato FOSS</string>
-    <string name="tomato_foss_desc">All features are unlocked in this version. If my app made a difference in your life, please consider supporting me by donating on %1$s.</string>
-    <string name="tomato_plus_desc">Customize further with Tomato+</string>
+    <string name="tomato_foss">Cypher Focus FOSS</string>
+    <string name="tomato_foss_desc">All features are unlocked in this version. If Cypher Focus made a difference in your life, please consider supporting the developer by donating on %1$s.</string>
+    <string name="tomato_plus_desc">Customize further with Cypher Focus+</string>
     <string name="total">total</string>
     <string name="undo">Undo</string>
     <string name="up_next">Up next</string>
