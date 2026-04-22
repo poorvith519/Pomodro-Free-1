@@ -320,8 +320,6 @@ fun AppScreen(
                             onAction = timerViewModel::onAction,
                             modifier = if (isAODEnabled) Modifier
                                 .clickable {
-                                    if (!uiState.timerRunning)
-                                        timerViewModel.onAction(TimerAction.ToggleTimer)
                                     if (backStack.size < 2)
                                         backStack.add(Screen.AOD)
                                 } else Modifier
