@@ -150,4 +150,19 @@
     <string name="infinite_focus">Infinite focus</string>
     <string name="settings_infinite_focus_tip">Long press the timer clock to enable infinite focus mode</string>
     <string name="cancel">Cancel</string>
+    <string name="clock_display">Clock &amp; Display</string>
+    <string name="clock_style">Clock Style</string>
+    <string name="clock_style_digital">Digital</string>
+    <string name="clock_style_minimal">Minimal</string>
+    <string name="clock_style_bold">Bold</string>
+    <string name="clock_font_weight">Number Style</string>
+    <string name="compact_mode">Compact Mode</string>
+    <string name="compact_mode_desc">Reduce spacing on the timer screen</string>
+    <string name="widget_theme">Widgets &amp; Theme</string>
+    <string name="widget_style">Widget Layout</string>
+    <string name="card_radius">Card Corner Radius</string>
+    <string name="streak">Focus Streak</string>
+    <string name="focus_efficiency">Focus Efficiency</string>
+    <string name="peak_hours">Peak Focus Hours</string>
+    <string name="cumulative_focus">Cumulative Focus</string>
 </resources>
