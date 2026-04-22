@@ -95,7 +95,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onStart() {
         super.onStart()
-        // Increase the timer loop frequency again when visible to make the progress smoother
-        stateRepository.timerFrequency = 60f
+        // Increase the timer loop frequency when visible for maximum smoothness on high-refresh-rate displays
+        stateRepository.timerFrequency = 120f
     }
 }
