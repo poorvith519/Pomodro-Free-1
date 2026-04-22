@@ -84,7 +84,6 @@ fun AppearanceSettings(
     contentPadding: PaddingValues,
     isPlus: Boolean,
     onAction: (SettingsAction) -> Unit,
-    setShowPaywall: (Boolean) -> Unit,
     onBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -154,21 +153,17 @@ fun AppearanceSettings(
                     ThemePickerListItem(
                         theme = settingsState.theme,
                         onThemeChange = { onAction(SettingsAction.SaveTheme(it)) },
-                        items = if (isPlus) 3 else 1,
+                        items = 3,
                         index = 0
                     )
-                }
-
-                if (!isPlus) {
-                    item { PlusDivider(setShowPaywall) }
                 }
 
                 item {
                     ColorSchemePickerListItem(
                         color = settingsState.colorScheme.toColor(),
                         items = 3,
-                        index = if (isPlus) 1 else 0,
-                        isPlus = isPlus,
+                        index = 1,
+                        isPlus = true,
                         onColorChange = { onAction(SettingsAction.SaveColorScheme(it)) },
                     )
                 }
@@ -230,9 +225,7 @@ fun AppearanceSettingsPreview() {
         AppearanceSettings(
             settingsState = settingsState,
             contentPadding = PaddingValues(),
-            isPlus = true,
             onAction = {},
-            setShowPaywall = {},
             onBack = {}
         )
     }
