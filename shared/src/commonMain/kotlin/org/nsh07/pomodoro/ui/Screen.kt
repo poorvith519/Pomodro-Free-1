@@ -48,6 +48,12 @@ sealed class Screen : NavKey {
 
         @Serializable
         object Timer : Settings()
+
+        @Serializable
+        object ClockDisplay : Settings()
+
+        @Serializable
+        object WidgetTheme : Settings()
     }
 
     @Serializable
