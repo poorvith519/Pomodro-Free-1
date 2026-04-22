@@ -18,13 +18,5 @@
 package org.nsh07.pomodoro.billing
 
 import android.content.Context
-import com.revenuecat.purchases.Purchases
-import com.revenuecat.purchases.PurchasesConfiguration
 
-fun initializePurchases(context: Context) {
-    Purchases.configure(
-        PurchasesConfiguration
-            .Builder(context, "goog_jBpRIBjTYvhKYluCqkPXSHbuFbX")
-            .build()
-    )
-}
+fun initializePurchases(context: Context) {}

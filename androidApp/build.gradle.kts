@@ -131,9 +131,6 @@ dependencies {
     implementation(libs.androidx.glance.preview)
     implementation(libs.androidx.glance.appwidget.preview)
 
-    "playImplementation"(libs.revenuecat.purchases)
-    "playImplementation"(libs.revenuecat.purchases.ui)
-
     // koin
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.koin.core)

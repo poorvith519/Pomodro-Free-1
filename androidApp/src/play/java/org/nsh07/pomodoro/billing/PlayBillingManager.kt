@@ -17,38 +17,12 @@
 
 package org.nsh07.pomodoro.billing
 
-import android.util.Log
-import com.revenuecat.purchases.Purchases
-import com.revenuecat.purchases.getCustomerInfoWith
-import com.revenuecat.purchases.interfaces.UpdatedCustomerInfoListener
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-private const val ENTITLEMENT_ID = "plus"
-
 /**
- * Google Play implementation of BillingManager
+ * Google Play implementation of BillingManager - all features unlocked for free
  */
 class PlayBillingManager : BillingManager {
-    private val _isPlus = MutableStateFlow(false)
-    override val isPlus = _isPlus.asStateFlow()
-
-    private val purchases by lazy { Purchases.sharedInstance }
-
-    init {
-        purchases.updatedCustomerInfoListener =
-            UpdatedCustomerInfoListener { customerInfo ->
-                _isPlus.value = customerInfo.entitlements[ENTITLEMENT_ID]?.isActive == true
-            }
-
-        // Fetch initial customer info
-        purchases.getCustomerInfoWith(
-            onSuccess = { customerInfo ->
-                _isPlus.value = customerInfo.entitlements[ENTITLEMENT_ID]?.isActive == true
-            },
-            onError = { error ->
-                Log.e("GooglePlayPaywallManager", "Error fetching customer info: $error")
-            }
-        )
-    }
+    override val isPlus = MutableStateFlow(true).asStateFlow()
 }

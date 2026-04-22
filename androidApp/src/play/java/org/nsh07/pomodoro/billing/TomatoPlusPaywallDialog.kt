@@ -17,22 +17,30 @@
 
 package org.nsh07.pomodoro.billing
 
+import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
-import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButtonDefaults
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.MaterialTheme.colorScheme
+import androidx.compose.material3.MaterialTheme.typography
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.revenuecat.purchases.ui.revenuecatui.Paywall
-import com.revenuecat.purchases.ui.revenuecatui.PaywallOptions
-import com.revenuecat.purchases.ui.revenuecatui.customercenter.CustomerCenter
 import org.nsh07.pomodoro.R
-import org.nsh07.pomodoro.ui.theme.CustomColors.listItemColors
+import org.nsh07.pomodoro.ui.theme.LocalAppFonts
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
@@ -40,29 +48,41 @@ fun TomatoPlusPaywallDialog(
     isPlus: Boolean,
     onDismiss: () -> Unit
 ) {
-    val paywallOptions = remember {
-        PaywallOptions.Builder(dismissRequest = onDismiss).build()
-    }
+    BackHandler(enabled = true, onDismiss)
 
-    Scaffold { innerPadding ->
-        if (!isPlus) {
-            Paywall(paywallOptions)
-
-            FilledTonalIconButton(
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = Modifier
+            .fillMaxSize()
+            .background(colorScheme.surface)
+    ) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Icon(
+                painterResource(R.drawable.bmc),
+                null,
+                tint = colorScheme.onSurface
+            )
+            Spacer(Modifier.height(16.dp))
+            Text(
+                stringResource(R.string.tomato_foss),
+                style = typography.headlineSmall,
+                fontFamily = LocalAppFonts.current.topBarTitle,
+                color = colorScheme.onSurface
+            )
+            Spacer(Modifier.height(8.dp))
+            Text(
+                stringResource(R.string.tomato_foss_desc, "BuyMeACoffee"),
+                textAlign = TextAlign.Center,
+                color = colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 24.dp)
+            )
+            Spacer(Modifier.height(16.dp))
+            Button(
                 onClick = onDismiss,
-                shapes = IconButtonDefaults.shapes(),
-                colors = IconButtonDefaults.filledTonalIconButtonColors(containerColor = listItemColors.containerColor),
-                modifier = Modifier
-                    .padding(innerPadding)
-                    .padding(16.dp)
+                shapes = ButtonDefaults.shapes()
             ) {
-                Icon(
-                    painterResource(R.drawable.clear),
-                    null
-                )
+                Text(stringResource(R.string.bmc))
             }
-        } else {
-            CustomerCenter(onDismiss = onDismiss)
         }
     }
 }
