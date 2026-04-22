@@ -39,6 +39,12 @@ sealed interface SettingsAction {
     data class SaveVibrationOffDuration(val duration: Long) : SettingsAction
     data class SaveVibrationAmplitude(val amplitude: Int) : SettingsAction
 
+    data class SaveClockStyle(val style: String) : SettingsAction
+    data class SaveWidgetStyle(val style: String) : SettingsAction
+    data class SaveClockFontWeight(val weight: String) : SettingsAction
+    data class SaveCardRadius(val radius: String) : SettingsAction
+    data class SaveCompactMode(val enabled: Boolean) : SettingsAction
+
     data object AskEraseData : SettingsAction
     data object CancelEraseData : SettingsAction
     data object EraseData : SettingsAction
