@@ -65,9 +65,7 @@ import androidx.window.core.layout.WindowSizeClass.Companion.WIDTH_DP_EXPANDED_L
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import org.koin.compose.koinInject
 import org.nsh07.pomodoro.di.AppInfo
-import org.nsh07.pomodoro.di.FlavorUI
 import org.nsh07.pomodoro.ui.mergePaddingValues
 import org.nsh07.pomodoro.ui.settingsScreen.components.LicenseBottomSheet
 import org.nsh07.pomodoro.ui.theme.CustomColors.detailPaneTopBarColors
@@ -85,7 +83,6 @@ import tomato.shared.generated.resources.app_name
 import tomato.shared.generated.resources.app_name_plus
 import tomato.shared.generated.resources.arrow_back
 import tomato.shared.generated.resources.back
-import tomato.shared.generated.resources.discord
 import tomato.shared.generated.resources.email
 import tomato.shared.generated.resources.gavel
 import tomato.shared.generated.resources.github
@@ -102,7 +99,6 @@ fun AboutScreen(
     isPlus: Boolean,
     onBack: () -> Unit,
     modifier: Modifier = Modifier,
-    flavorUI: FlavorUI = koinInject(),
     appInfo: AppInfo = koinInject()
 ) {
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
@@ -114,10 +110,7 @@ fun AboutScreen(
 
     val socialLinks = remember {
         listOf(
-            SocialLink(Res.drawable.github, "https://github.com/nsh07"),
-            SocialLink(Res.drawable.x, "https://x.com/nsh_zero7"),
-            SocialLink(Res.drawable.globe, "https://nsh07.github.io"),
-            SocialLink(Res.drawable.email, "mailto:nishant.28@outlook.com")
+            SocialLink(Res.drawable.github, "https://github.com/poorvith519")
         )
     }
 
@@ -209,22 +202,8 @@ fun AboutScreen(
                                 )
                             }
                             Spacer(Modifier.weight(1f))
-                            Row(horizontalArrangement = Arrangement.spacedBy(2.dp)) {
-                                FilledTonalIconButton(
-                                    onClick = {
-                                        uriHandler.openUri("https://discord.gg/MHhBQcxHu6")
-                                    },
-                                    shapes = IconButtonDefaults.shapes()
-                                ) {
-                                    Icon(
-                                        painterResource(Res.drawable.discord),
-                                        contentDescription = "Discord",
-                                        modifier = Modifier.size(24.dp)
-                                    )
-                                }
-
-                                FilledTonalIconButton(
-                                    onClick = { uriHandler.openUri("https://github.com/nsh07/Tomato") },
+                            FilledTonalIconButton(
+                                    onClick = { uriHandler.openUri("https://github.com/poorvith519/Pomodro-Free-1") },
                                     shapes = IconButtonDefaults.shapes()
                                 ) {
                                     Icon(
@@ -233,7 +212,6 @@ fun AboutScreen(
                                         modifier = Modifier.size(24.dp)
                                     )
                                 }
-                            }
                         }
                     }
                 }
@@ -291,11 +269,6 @@ fun AboutScreen(
                         }
                     }
                 }
-                item { Spacer(Modifier.height(12.dp)) }
-
-                item { flavorUI.topButton(Modifier) }
-                item { flavorUI.bottomButton(Modifier) }
-
                 item { Spacer(Modifier.height(12.dp)) }
 
                 item {
