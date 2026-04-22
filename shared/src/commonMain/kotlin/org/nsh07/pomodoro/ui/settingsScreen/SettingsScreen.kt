@@ -50,6 +50,8 @@ import org.nsh07.pomodoro.ui.settingsScreen.screens.AlarmSettings
 import org.nsh07.pomodoro.ui.settingsScreen.screens.AppearanceSettings
 import org.nsh07.pomodoro.ui.settingsScreen.screens.SettingsMainScreen
 import org.nsh07.pomodoro.ui.settingsScreen.screens.TimerSettings
+import org.nsh07.pomodoro.ui.settingsScreen.screens.ClockCustomizationSettings
+import org.nsh07.pomodoro.ui.settingsScreen.screens.WidgetThemeSettings
 import org.nsh07.pomodoro.ui.settingsScreen.screens.backupRestore.BackupRestoreScreen
 import org.nsh07.pomodoro.ui.settingsScreen.viewModel.SettingsViewModel
 import org.nsh07.pomodoro.ui.theme.CustomColors.topBarColors
@@ -159,9 +161,7 @@ fun SettingsScreenRoot(
                 AppearanceSettings(
                     settingsState = settingsState,
                     contentPadding = contentPadding,
-                    isPlus = isPlus,
                     onAction = viewModel::onAction,
-                    setShowPaywall = setShowPaywall,
                     onBack = backStack::onBack,
                     modifier = modifier,
                 )
@@ -191,6 +191,29 @@ fun SettingsScreenRoot(
                     sessionsSliderState = sessionsSliderState,
                     onAction = viewModel::onAction,
                     setShowPaywall = setShowPaywall,
+                    onBack = backStack::onBack,
+                    modifier = modifier,
+                )
+            }
+            entry<Screen.Settings.ClockDisplay>(
+                metadata = detailPane()
+            ) {
+                ClockCustomizationSettings(
+                    settingsState = settingsState,
+                    contentPadding = contentPadding,
+                    onAction = viewModel::onAction,
+                    onBack = backStack::onBack,
+                    modifier = modifier,
+                )
+            }
+
+            entry<Screen.Settings.WidgetTheme>(
+                metadata = detailPane()
+            ) {
+                WidgetThemeSettings(
+                    settingsState = settingsState,
+                    contentPadding = contentPadding,
+                    onAction = viewModel::onAction,
                     onBack = backStack::onBack,
                     modifier = modifier,
                 )
