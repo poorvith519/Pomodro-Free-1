@@ -35,6 +35,8 @@ import tomato.shared.generated.resources.theme
 import tomato.shared.generated.resources.timer
 import tomato.shared.generated.resources.timer_filled
 import tomato.shared.generated.resources.vibrate
+import tomato.shared.generated.resources.clocks
+import tomato.shared.generated.resources.view_day
 
 val settingsScreens = listOf(
     SettingsNavItem(
@@ -59,5 +61,17 @@ val settingsScreens = listOf(
         Res.drawable.palette,
         Res.string.appearance,
         listOf(Res.string.theme, Res.string.color_scheme, Res.string.black_theme)
+    ),
+    SettingsNavItem(
+        Screen.Settings.ClockDisplay,
+        Res.drawable.clocks,
+        Res.string.always_on_display,
+        listOf(Res.string.timer)
+    ),
+    SettingsNavItem(
+        Screen.Settings.WidgetTheme,
+        Res.drawable.view_day,
+        Res.string.theme,
+        listOf(Res.string.color_scheme)
     )
 )
